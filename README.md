@@ -1,3 +1,4 @@
+<img width="2816" height="1536" alt="Title" src="https://github.com/user-attachments/assets/4a629122-a458-4f68-a02b-58a262eabd35" />
 
 # 메크 서바이벌 (Mech Survival)
 
