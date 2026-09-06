@@ -24,8 +24,13 @@
 - WeaponBase라는 추상 클래스를 구현. 해당 클래스는 무기 정보, 무기 레벨, 데미지 산출, 무기 초기화를 소유. 이를 통해 해당 요소를 공통화.
 - 무기는 해당 클래스를 상속받아 개인의 작동 방식과 레벨별 효과를 오버라이드해서 구현.
 - 이를 통해 기본무기를 제외한 7종의 무기를 구현.
-- <pre> ``` Player └── WeaponController (관리 + 기본 무기) ├── RailgunWeapon ├── OrbitalDroneWeapon └── ... ``` </pre>
+- 플레이어가 소지한 무기를 WeaponController가 자식으로 보유, 관리함.
 - 동시에 제거할 수 없으며 필수요소기에 플레이어의 기본 무기도 WeaponController가 겸함.
+```
+Player
+└ WeaponController (관리 + 기본 무기)
+    └ RailgunWeapon, OrbitalDroneWeapon, BladeDrone ...
+```
 
 ### 난이도 설계
 - 목표 시간을 변수로 받고 경과 시간을 0~1로 정규화. 시간에 따라 적의 구성, 체력을 수식으로 조절. 경과 시간 비율에 따른 통합관리.
